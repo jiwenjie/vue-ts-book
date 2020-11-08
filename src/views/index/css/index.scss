@@ -1,0 +1,61 @@
+/* Login scss */
+.login-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: $loginBg;
+    display: flex;
+    position: relative;
+}
+
+.switch-bg-btn {
+    padding: 6px 12px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.switch-span {
+    color: #fff;
+}
+
+.nav-space {
+    position: absolute;
+}
+
+.login-content {
+    position: absolute;
+    margin-top: 12%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.home-header {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.home-logo {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.list,
+.introduce {
+    color: #fff;
+    margin-top: 24px;
+}
+
+.link {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+
