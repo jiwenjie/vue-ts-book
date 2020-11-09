@@ -77,7 +77,7 @@ module.exports = {
       // 设置代理
       // proxy all requests starting with /api to jsonplaceholder
       "/api": {
-        target: "http://localhost:3000/",
+        target: "https://www.wanandroid.com/",
         changeOrigin: true,
         ws: true,
         pathRewrite: {

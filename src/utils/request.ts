@@ -3,11 +3,9 @@ import { Message, MessageBox } from 'element-ui'
 // import { UserModule } from '@/store/modules/user'
 import store from '@/store'
 
-let wanAndroid: string = "https://www.wanandroid.com";
-
 const service = axios.create({
-  baseURL: wanAndroid, // 
-  timeout: 8000
+  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
+  timeout: 7000
   // withCredentials: true // send cookies when cross-domain requests
 })
 
@@ -28,11 +26,17 @@ service.interceptors.request.use(
 // Response interceptors
 service.interceptors.response.use(
   response => {
-    console.log('request', response);
-    return Promise.resolve(response)
+    // console.log('response', response)
+    if (response.data.errorCode === 0) {
+      console.log('success', response.data)
+      return Promise.resolve(response.data)
+    } else {
+      Message({ message: response.data.errorMsg, type: 'error' })
+      return Promise.reject(response.data.errorMsg)
+    }
   },
   error => {
-    console.log('error', error);
+    console.log('error', error)
     if (error.response.status === 401 || error.response.status === 403) {
       // UserModule.ResetToken()
       location.reload()

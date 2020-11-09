@@ -7,9 +7,13 @@ import { Route } from 'vue-router'
 
 const whiteList = ['/404'] // 不重定向白名单
 router.beforeEach(async (to: Route, _: Route, next: any) => {
-    NProgress.start()
+  NProgress.start()
+  if (to.path === "/") {
+    next('/login')
+  } else {
     next()
-    NProgress.done()
+  }
+  NProgress.done()
 })
 
 router.afterEach(() => {

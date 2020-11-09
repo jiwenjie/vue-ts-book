@@ -21,10 +21,10 @@ Vue.use(Router)
   }
 */
 export const constantRoutes: RouteConfig[] = [
-    {
-      path: '/',
-      component: () => import('@/views/login/login.vue'),
-    },
+    // {
+    //   path: '/',
+    //   component: () => import('@/views/login/login.vue'),
+    // },
     {
         path: '/login',
         component: () => import('@/views/login/login.vue'),

@@ -1,0 +1,121 @@
+#swiperDIV {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.img-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+}
+
+.img-list li {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-list img {
+  width: 100%;
+  height: 100%;
+}
+
+.option-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+  z-index: 99;
+  text-align: center;
+}
+
+.option-list-item {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .4);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.cur-option-style {
+  background-color: #fff;
+}
+
+.common-btn-space {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 22px;
+}
+
+.pre-btn-space {
+  left: 20px;
+}
+
+.next-btn-space {
+  right: 20px;
+}
+
+.common-btn-span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
+}
+
+.pre-btn-span {
+  transform: rotate(45deg);
+}
+
+.next-btn-span {
+  transform: rotate(-135deg);
+}
+
+/* 实现动画的两组类(淡入淡出) */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .6s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* (滚动) */
+.translate-enter {
+  transform: translateX(100%)
+}
+
+.translate-enter-to {
+  transition: all .6s ease;
+  transform: translateX(0);
+}
+
+.translate-leave {
+  transform: translateX(0)
+}
+
+.translate-leave-active {
+  transition: all .6s ease;
+  transform: translateX(-100%)
+}

@@ -3,9 +3,10 @@ import request from '@/utils/request'
 
 export const getBanner = () =>
   request({
-    url: '/banner/json',
+    url: '/api/banner/json',
     method: 'get',
   })
+
 
 // export const getUserInfo = () =>
 //   request({

@@ -27,11 +27,12 @@
 
     @Watch("$route")
     routeChange(val: Route, oldVal: Route): void {
-      if (val.path === "/login") {
+      if (val.path === "/login" || val.path === "/") {
         this.isShowNav = false;
       } else {
         this.isShowNav = true;
       }
     }
   }
+
 </script>
